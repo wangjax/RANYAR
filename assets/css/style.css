@@ -1,0 +1,57 @@
+.btn-primary {
+	color: rgb(255, 255, 255);
+	background-color: #e7e093;
+	border-radius: 10px;
+	border-color: #ceab93;
+}
+
+.btn-primary:hover {
+	color: #222;
+	background-color: #fffbe9;
+	border-color: rgb(255, 255, 255);
+}
+
+.btn-success {
+	background-color: #6D8B74;
+	border-radius: 10px;
+	border-color: #ceab93;
+}
+
+.btn-success:hover {
+	color: #222;
+	background-color: #fffbe9;
+	border-color: rgb(255, 255, 255);
+}
+
+.btn-danger {
+	background-color: #D885A3;
+	border-radius: 10px;
+	border-color: #ceab93;
+}
+
+.btn-danger:hover {
+	color: #222;
+	background-color: #fffbe9;
+	border-color: rgb(255, 255, 255);
+}
+
+.brand-name {
+	font-size: 25px;
+	padding-top: 10px;
+	color: #886f6f;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.brand-admin {
+	font-size: 25px;
+	padding-top: 10px;
+	color: #36b9cc;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	body  {
+	  width: 100%;
+	}
+  }
