@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+
 <div class="container-fluid">
     <h4>Invoice Pemesanan Produk</h4>
 
@@ -6,6 +8,7 @@
             <th>Id Invoice</th>
             <th>Nama Pemesanan</th>
             <th>Alamat Pengiriman</th>
+            <th>No. WA</th>
             <th>Tanggal Pemesanan</th>
             <th>Batas Pembayaran</th>
             <th>Aksi</th>
@@ -17,6 +20,7 @@
             <td><?php echo $inv->id ?></td>
             <td><?php echo $inv->nama ?></td>
             <td><?php echo $inv->alamat ?></td>
+            <td><?php echo $inv->no_wa ?></td>
             <td><?php echo $inv->tgl_pesan ?></td>
             <td><?php echo $inv->batas_bayar ?></td>
             <td><?php echo anchor('admin/invoice/detail/' .$inv->id, 

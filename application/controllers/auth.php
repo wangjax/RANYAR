@@ -11,7 +11,7 @@ class Auth extends CI_Controller{
         {
             $this->load->view('templates/header');
             $this->load->view('form_login');
-            $this->load->view('templates/footer');
+            $this->load->view('templates/footer_2');
         }else{
             $auth = $this->model_auth->cek_login();
             if($auth == FALSE)

@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../../../../../../assets/css/style.css" type="text/css">
 <div class="container-fluid">
     <h3><i class="fas fa-edit"></i> Data Barang</h3>
 

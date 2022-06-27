@@ -9,10 +9,10 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="<?php echo base_url('assets/img/slider1.jpg') ?>" class="d-block w-100" alt="...">
+                <img src="<?php echo base_url('assets/img/slider1.jpg') ?>" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-            <img src="<?php echo base_url('assets/img/slider2.jpg') ?>" class="d-block w-100" alt="...">
+                <img src="<?php echo base_url('assets/img/slider2.jpg') ?>" class="d-block w-100" alt="...">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -25,25 +25,29 @@
         </a>
     </div>
 
-    <div class ="row text-center mt-3">
+    <div class="row text-center mt-3">
 
-    <?php foreach ($barang as $brg) : ?>
+        <?php foreach ($barang as $brg) : ?>
 
-        <div class="card ml-4" style="width: 18rem;">
-            <img src="<?php echo base_url().'/uploads/' .$brg->gambar ?>" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title mb-1"><?php echo $brg->nama_brg ?></h5>
-                <small><?php echo $brg->keterangan ?></small><br>
-                <span class="badge badge-pill bg-success mb-3">Rp<?php echo number_format($brg->harga, 0,',','.')  ?></span><br>
-               
-               <?php echo anchor('dashboard/tambah_ke_keranjang/'.$brg->id_brg, 
-                '<div class="btn btn-sm btn-primary ">Tambah Ke Keranjang</div>') ?>
+            <div class="card ml-4 mb-2" style="width: 16rem;">
+                <img src="<?php echo base_url() . '/uploads/' . $brg->gambar ?>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title mb-1"><?php echo $brg->nama_brg ?></h5>
+                    <small><?php echo $brg->keterangan ?></small><br>
+                    <span class="badge badge-pill bg-success mb-3">Rp<?php echo number_format($brg->harga, 0, ',', '.')  ?></span><br>
 
-                <?php echo anchor('dashboard/detail/'.$brg->id_brg,    
-                '<div class="btn btn-sm btn-success ">Detail</div>') ?>
-                
+                    <?php echo anchor(
+                        'dashboard/tambah_ke_keranjang/' . $brg->id_brg,
+                        '<div class="btn btn-sm btn-primary mb-2">Tambah Ke Keranjang</div>'
+                    ) ?>
+
+                    <?php echo anchor(
+                        'dashboard/detail/' . $brg->id_brg,
+                        '<div class="btn btn-sm btn-success ">Detail</div>'
+                    ) ?>
+
+                </div>
             </div>
-        </div>
-    <?php endforeach; ?>
+        <?php endforeach; ?>
     </div>
 </div>

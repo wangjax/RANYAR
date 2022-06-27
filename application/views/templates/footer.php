@@ -1,4 +1,9 @@
-  <!-- Bootstrap core JavaScript-->
+<footer class="text-center bg-light text-lg-start" style="position:relatives; bottom:0;width:100%;">
+    <!-- Copyright -->
+    <div class="text-center p-3 text-warning"> © 2022 Copyright <a class="text-dark" href="
+									<?= base_url() ?>">Raihan Naufal</a>
+    </div>
+
   <script src="<?php echo base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url() ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

@@ -1,5 +1,3 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
 <body id="page-top">
 
     <!-- Page Wrapper -->
@@ -110,7 +108,7 @@
                         
                         <ul class="na navbar-nav navbar-right">
                             <?php if($this->session->userdata('username')) { ?>
-                                <li><div>Selamat Datang <?php echo $this->session->userdata('username') ?></div></li>
+                                <li><div>Halo! <?php echo $this->session->userdata('username') ?></div></li>
 
                                 <li class="ml-2"><?php echo anchor('auth/logout','Logout'); ?></li>
 

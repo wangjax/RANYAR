@@ -38,7 +38,7 @@ class Dashboard extends CI_Controller{
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('keranjang');
-        $this->load->view('templates/footer');
+        $this->load->view('templates/footer_2');
     }
 
     public function hapus_keranjang()
@@ -63,7 +63,7 @@ class Dashboard extends CI_Controller{
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('pembayaran');
-        $this->load->view('templates/footer');
+        $this->load->view('templates/footer_2');
     }
 
     public function proses_pesanan()
@@ -74,7 +74,7 @@ class Dashboard extends CI_Controller{
             $this->load->view('templates/header');
             $this->load->view('templates/sidebar');
             $this->load->view('proses_pesanan');
-            $this->load->view('templates/footer');
+            $this->load->view('templates/footer_2');
         } else{
             echo "Maaf Pesanan Anda gagal diproses.";
         }
@@ -87,6 +87,6 @@ class Dashboard extends CI_Controller{
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('detail_barang',$data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/footer_2');
     }
 }

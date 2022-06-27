@@ -17,7 +17,7 @@ class Registrasi extends CI_Controller{
         if($this->form_validation->run() == FALSE){
         $this->load->view('templates/header');
         $this->load->view('registrasi');
-        $this->load->view('templates/footer');
+        $this->load->view('templates/footer_2');
         }else{
             $data = array(
                 'id'        => '',

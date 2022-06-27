@@ -50,10 +50,10 @@
             <div class="form-group">
                 <label>Pilih Bank </label>
                 <select class="form-control">
-                    <option>BCA - XXXXXXX</option>
-                    <option>DANA - XXXXXXXXXXX</option>
-                    <option>GO PAY - XXXXXXXXXXX</option>
-                    <option>OVO - XXXXXXXXXXXX</option>
+                    <option>BCA - 6450300177</option>
+                    <option>DANA - 085722102987</option>
+                    <option>GO PAY - 085722102987</option>
+                    <option>OVO - 085722102987</option>
                 </select>
             </div>
 
