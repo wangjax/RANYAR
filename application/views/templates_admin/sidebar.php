@@ -27,6 +27,12 @@
                     <i class="fas fa-fw fa-file-invoice"></i>
                     <span>Invoice</span></a>
             </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('admin/data_user')?>">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Data User</span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
