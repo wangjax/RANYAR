@@ -37,4 +37,26 @@ class Invoice extends CI_Controller{
         $this->load->view('admin/detail_invoice',$data);
         $this->load->view('templates_admin/footer');
     }
+
+    public function hapus_invoice($id)
+    {
+        $where = array('id' => $id);
+        $this->model_invoice->hapus_invoice($where, 'tb_invoice');
+        redirect('admin/invoice/index');
+    }
+
+    public function status_pemesanan($id)
+    {
+        $where = array('id' => $id);
+        $this->model_invoice->index($where, 'tb_invoice');
+
+        $data = array(
+            'status_pemesanan'     => $this->input->post('status_pemesanan')
+     
+        );
+
+        $this->db->insert('tb_invoice', $data);
+        redirect('admin/invoice');
+    }
+
 }

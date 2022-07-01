@@ -18,6 +18,12 @@
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('admin/data_barang')?>">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('admin/data_barang')?>">
                     <i class="fas fa-fw fa-database"></i>
                     <span>Data Barang</span></a>
             </li>
@@ -81,9 +87,9 @@
                         </li>
                         <ul class="na navbar-nav navbar-right">
                             <?php if($this->session->userdata('username')) { ?>
-                                <li><div>Selamat Datang <?php echo $this->session->userdata('username') ?></div></li>
+                                <li><div style="color:#886F6F;">Selamat Datang <?php echo $this->session->userdata('username') ?></div></li>
 
-                                <li class="ml-2"><?php echo anchor('auth/logout','Logout'); ?></li>
+                                <li class="ml-2" style="color:#886F6F;"><?php echo anchor('auth/logout','Logout'); ?></li>
 
                                  <?php } else{ ?> 
                                 <li><?php echo anchor ('auth/login','Login'); ?></li>

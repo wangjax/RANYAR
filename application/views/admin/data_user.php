@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../../../../../assets/css/style.css" type="text/css">
+<link rel="stylesheet" href="../assets/css/style.css" type="text/css">
 <div class="container-fluid">
     <h3><i class="fas fa-edit"></i> Data User</h3>
      
@@ -7,7 +7,8 @@
         <tr>
             <th>NO</th>
             <th>NAMA</th>
-            <th>USERNAME</th>            
+            <th>USERNAME</th>   
+            <th colspan="2">Aksi</th>          
         </tr>
 
         <?php
@@ -17,6 +18,7 @@
             <td><?php echo $no++ ?></td>
             <td><?php echo $u->nama ?></td>
             <td><?php echo $u->username ?></td>
+            <td><?php echo anchor('admin/data_user/hapus_user/' .$u->id, '<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>')?></td>
             
         </tr>
 

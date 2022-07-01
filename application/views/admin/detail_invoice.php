@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../../../../assets/css/style.css" type="text/css">
+
 <div class="container-fluid">
     <h4>Detail Pesanan <div class="btn btn-sm btn-success">No. Invoice: 
         <?php echo $invoice->id ?></div></h4>

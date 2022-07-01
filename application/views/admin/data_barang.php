@@ -10,7 +10,7 @@
             <th>KATEGORI</th>
             <th>HARGA</th>
             <th>STOK</th>
-            <th colspan="3">Aksi</th>              
+            <th colspan="2">Aksi</th>              
         </tr>
 
         <?php
@@ -49,22 +49,32 @@
            <div class="form-group">
                <label">Nama Barang</label>
                <input type="text" name="nama_brg" class="form-control">
+               <?php echo form_error('nama_brg', '<div class="text-danger small ml-2">','</div>
+                                            ')?>
            </div>
            <div class="form-group">
                <label">Keterangan</label>
                <input type="text" name="keterangan" class="form-control">
+               <?php echo form_error('keterangan', '<div class="text-danger small ml-2">','</div>
+                                            ')?>
            </div>
            <div class="form-group">
                <label">Kategori</label>
                <input type="text" name="kategori" class="form-control">
-           </div>
+               <?php echo form_error('kategori', '<div class="text-danger small ml-2">','</div>
+                                            ')?>        
+              </div>
            <div class="form-group">
                <label">Harga</label>
                <input type="text" name="harga" class="form-control">
+               <?php echo form_error('harga', '<div class="text-danger small ml-2">','</div>
+                                            ')?>
            </div>
            <div class="form-group">
                <label">Stok</label>
                <input type="text" name="stok" class="form-control">
+               <?php echo form_error('stok', '<div class="text-danger small ml-2">','</div>
+                                            ')?>
            </div>
            <div class="form-group">
                <label>Gambar Produk</label><br>

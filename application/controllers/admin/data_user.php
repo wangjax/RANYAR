@@ -25,5 +25,11 @@ class data_user extends CI_Controller{
         $this->load->view('admin/data_user',$data);
         $this->load->view('templates_admin/footer');
     }
+    public function hapus_user($id)
+    {
+        $where = array('id' => $id);
+        $this->model_user->hapus_user($where, 'tb_user');
+        redirect('admin/data_user');
+    }
 
 }

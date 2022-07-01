@@ -1,4 +1,4 @@
-<footer class="text-center bg-light text-lg-start" style="position:fixed; bottom:0;width:100%;">>
+<footer class="text-center bg-light text-lg-start" style="position:fixed; bottom:0;width:100%;">
     <!-- Copyright -->
     <div class="text-center p-3 text-warning"> © 2022 Copyright <a class="text-dark" href="
 									<?= base_url() ?>">Raihan Naufal</a>

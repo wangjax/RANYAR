@@ -9,10 +9,10 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?php echo base_url('assets/img/slider1.jpg') ?>" class="d-block w-100" alt="...">
+                <img src="<?php echo base_url('assets/img/slider1.jpg') ?>" class="d-block w-100" class="w-75 p-2" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="<?php echo base_url('assets/img/slider2.jpg') ?>" class="d-block w-100" alt="...">
+                <img src="<?php echo base_url('assets/img/slider2.jpg') ?>" class="d-block w-100" class="w-75 p-2" alt="...">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -36,15 +36,16 @@
                     <small><?php echo $brg->keterangan ?></small><br>
                     <span class="badge badge-pill bg-success mb-3">Rp<?php echo number_format($brg->harga, 0, ',', '.')  ?></span><br>
 
-                    <?php echo anchor(
-                        'dashboard/tambah_ke_keranjang/' . $brg->id_brg,
-                        '<div class="btn btn-sm btn-primary mb-2">Tambah Ke Keranjang</div>'
-                    ) ?>
+                    <?php
+                                if ($brg->stok == "0") {
+                                    echo "<div class='btn btn-primary' disable>Stok Kosong</div>";
+                                }else {
+                                    echo anchor('dashboard/tambah_ke_keranjang/' . $brg-> id_brg, '<div class="btn btn-sm btn-primary">Tambah Ke Keranjang</div>');
+                                   
+                                    echo anchor('dashboard/detail/' . $brg->id_brg, '<div class="btn btn-sm btn-success "> Detail</div>');
+                                }
+                            ?>
 
-                    <?php echo anchor(
-                        'dashboard/detail/' . $brg->id_brg,
-                        '<div class="btn btn-sm btn-success ">Detail</div>'
-                    ) ?>
 
                 </div>
             </div>

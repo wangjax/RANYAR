@@ -68,18 +68,35 @@ class Dashboard extends CI_Controller{
 
     public function proses_pesanan()
     {
-        $is_processed = $this->model_invoice->index();
-        if($is_processed){
-            $this->cart->destroy();
-            $this->load->view('templates/header');
-            $this->load->view('templates/sidebar');
-            $this->load->view('proses_pesanan');
-            $this->load->view('templates/footer_2');
-        } else{
-            echo "Maaf Pesanan Anda gagal diproses.";
-        }
+        $this->form_validation->set_rules('nama','Nama','required',[
+            'required' => 'Nama wajib diisi!']);
+        $this->form_validation->set_rules('alamat','Alamat','required',[
+            'required' => 'Alamat wajib diisi!']);
+        $this->form_validation->set_rules('no_wa','No_wa','required',[
+            'required' => 'No. WA wajib diisi!']);
 
+
+
+        if($this->form_validation->run() == FALSE){
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('pembayaran');
+        $this->load->view('templates/footer_2');
+        }else{
+            $is_processed = $this->model_invoice->index();
+            if($is_processed){
+                $this->cart->destroy();
+                $this->load->view('templates/header');
+                $this->load->view('templates/sidebar');
+                $this->load->view('proses_pesanan');
+                $this->load->view('templates/footer_2');
+            } else{
+                echo "Maaf Pesanan Anda gagal diproses.";
+            }
+        }
+        
     }
+
 
     public function detail($id_brg)
     {

@@ -23,8 +23,7 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-            <!-- Divider -->
-            <hr class="sidebar-divider">
+
 
             <!-- Heading -->
             <div class="sidebar-heading">
@@ -108,9 +107,9 @@
                         
                         <ul class="na navbar-nav navbar-right">
                             <?php if($this->session->userdata('username')) { ?>
-                                <li><div>Halo! <?php echo $this->session->userdata('username') ?></div></li>
+                                <li><div style="color:#886F6F">Halo! <?php echo $this->session->userdata('username') ?></div></li>
 
-                                <li class="ml-2"><?php echo anchor('auth/logout','Logout'); ?></li>
+                                <li class="ml-2" style="color:#886F6F"><?php echo anchor('auth/logout','Logout'); ?></li>
 
                                  <?php } else{ ?> 
                                 <li><?php echo anchor ('auth/login','Login'); ?></li>

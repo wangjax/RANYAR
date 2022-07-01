@@ -7,10 +7,12 @@ class Model_invoice extends CI_Model{
         $nama   = $this->input->post('nama');
         $alamat   = $this->input->post('alamat');
         $no_wa = $this->input->post('no_wa');
+        $status_pemesanan = $this->input->post('status_pemesanan');
         $invoice = array(
             'nama' => $nama,
             'alamat' => $alamat,
             'no_wa' => $no_wa,
+            'status_pemesanan' => $status_pemesanan,
             'tgl_pesan' => date('Y-m-d H:i:s'),
             'batas_bayar' => date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'),
         date('m'), date('d') + 1, date('Y'))),
@@ -60,4 +62,6 @@ class Model_invoice extends CI_Model{
             return false;
         }
     }
+
+
 }

@@ -25,16 +25,22 @@
             <div class="form-group">
                 <label>Nama Lengkap</label>
                 <input type="text" name="nama" placeholder="Nama Lengkap Anda" class="form-control">
+                <?php echo form_error('nama', '<div class="text-danger small ml-2">','</div>
+                                            ')?>
             </div>
 
             <div class="form-group">
                 <label>Alamat Lengkap</label>
                 <input type="text" name="alamat" placeholder="Alamat Lengkap Anda" class="form-control">
+                <?php echo form_error('alamat', '<div class="text-danger small ml-2">','</div>
+                                            ')?>
             </div> 
 
             <div class="form-group">
                 <label>No. WA</label>
                 <input type="text" name="no_wa" placeholder="No. WA Anda" class="form-control">
+                <?php echo form_error('no_wa', '<div class="text-danger small ml-2">','</div>
+                                            ')?>
             </div>
 
             <div class="form-group">

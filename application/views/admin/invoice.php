@@ -11,7 +11,9 @@
             <th>No. WA</th>
             <th>Tanggal Pemesanan</th>
             <th>Batas Pembayaran</th>
-            <th>Aksi</th>
+            <th>Status Pembayaran</th>
+            <th colspan="2">Aksi</th>
+
         </tr>
 
         <?php foreach ($invoice as $inv): ?>
@@ -23,8 +25,17 @@
             <td><?php echo $inv->no_wa ?></td>
             <td><?php echo $inv->tgl_pesan ?></td>
             <td><?php echo $inv->batas_bayar ?></td>
-            <td><?php echo anchor('admin/invoice/detail/' .$inv->id, 
-            '<div class="btn btn-sm btn-primary">Detail</div>')?></td>
+            <td><select class="form-control" method="post" action="<?php echo base_url().'admin/invoice/status_pemesanan'?>">
+                <option>Pesanan Belum Dibayar</option>
+                <option>Pesanan Terkonfirmasi</option>
+                <option>Pesanan Diproses </option>
+                <option>Pesanan Batal </option>
+                </select> 
+                <button type="submit" class="btn btn-primary btn-user btn-block">Submit</button></form>
+            </td>
+            <td><?php echo anchor('admin/invoice/detail/' .$inv->id, '<div class="btn btn-sm btn-primary">Detail</div>')?></td>
+            <td><?php echo anchor('admin/invoice/hapus_invoice/' .$inv->id, '<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>')?></td>
+            
         </tr>
 
         <?php endforeach; ?>
