@@ -8,7 +8,7 @@
         #886F6F;">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url(). ('admin/data_barang')?>">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url(). ('admin/dashboard')?>">
                 <div class="sidebar-brand-icon">
                 <i class="fas fa-store"></i>
                 </div>
@@ -17,7 +17,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/data_barang')?>">
+                <a class="nav-link" href="<?php echo base_url('admin/dashboard_admin')?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>

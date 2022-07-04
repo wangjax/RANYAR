@@ -62,6 +62,16 @@ class Model_invoice extends CI_Model{
             return false;
         }
     }
+    public function hapus_invoice ($where, $table){
 
+        $this->db->where($where);
+        $this->db->delete($table);
+      }
+
+
+    public function tambah_status ($data, $table){
+        $this->db->get_where($table);
+        $this->db->update($table,$data);
+      }
 
 }

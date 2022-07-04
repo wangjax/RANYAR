@@ -45,17 +45,20 @@ class Invoice extends CI_Controller{
         redirect('admin/invoice/index');
     }
 
-    public function status_pemesanan($id)
+    public function status_pemesanan()
     {
-        $where = array('id' => $id);
-        $this->model_invoice->index($where, 'tb_invoice');
-
+        $id               = $this->input->get('id');
+        $status_pemesanan = $this->input->post('status_pemesanan');
+        
         $data = array(
-            'status_pemesanan'     => $this->input->post('status_pemesanan')
-     
+            'status_pemesanan'       => $status_pemesanan,
+        );
+    
+        $where = array(
+            'id' => $id,
         );
 
-        $this->db->insert('tb_invoice', $data);
+        $this->model_invoice->tambah_status($where, $data, 'tb_invoice');
         redirect('admin/invoice');
     }
 
